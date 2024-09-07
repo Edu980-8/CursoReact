@@ -21,18 +21,24 @@ const ArrayMapper = () => {
     { name: "Husky Manto Gris", status: false },
   ];
   const [array, setArray] = useState(sectionsList);
-  const set_Array = () => {
-    setArray([...array, { name: "New Wolf", status: false }]);//spread operator
-  };
+  
+  const onAddTask = (val) => {
+    if (val<1) return
+    const envio = {
+        name: val,
+        status: false,
+      }
+      setArray([...array, envio])
+  }
+  
   return (
     <div>
       <ol>
-        <AgregarRaza agregarRaza={setArray}></AgregarRaza>
+        <AgregarRaza agregarRaza={onAddTask}></AgregarRaza>
         {array.map((item,index) => (
           <Items key={index} name={item.name} item_status={item.status}></Items>
         ))}
       </ol>
-      <button onClick={set_Array}>Add Wolf</button>
     </div>
   );
 };

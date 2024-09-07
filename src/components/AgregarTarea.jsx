@@ -7,12 +7,8 @@ const AgregarTarea = ({ agregarRaza }) => {
     setInputValue(target.value);
   };
   const onSubmit = (event) => {
-    const envio = {
-      name: inputValue,
-      status: false,
-    };
     event.preventDefault(); // para que no recargue la pagina
-    agregarRaza((razas) => [...razas, envio]); // la funcion agregarTarea permite recibir el usestate del padre y usarlo en el hijo para modificar una lista de tareas.
+    agregarRaza(inputValue); 
   };
   return (
     <form onSubmit={onSubmit}>
