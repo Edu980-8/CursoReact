@@ -4,6 +4,7 @@ import PrimerComponente from "./PrimerComponente";
 import Contador from "./ContadorApp";
 import Lista from "./Listas_Ternario";
 import Lector from "./LecturaApi";
+import ArrayMapper from "./ArrayMapper";
 
 import './styles.css';
 
@@ -13,5 +14,6 @@ createRoot(document.getElementById("root")).render(
     <Contador conteo={2}/>
     <Lista />
     <Lector />
+    <ArrayMapper />
   </StrictMode>
 );
