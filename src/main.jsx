@@ -6,6 +6,7 @@ import Lista from "./Listas_Ternario";
 import Lector from "./LecturaApi";
 import ArrayMapper from "./ArrayMapper";
 
+
 import './styles.css';
 
 createRoot(document.getElementById("root")).render(

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import  { useState } from "react";
+import AgregarTarea from "./components/AgregarTarea";
 
 const Items = ({ name = "Item", item_status = false }) => {
   return (
@@ -21,11 +22,12 @@ const ArrayMapper = () => {
   ];
   const [array, setArray] = useState(sectionsList);
   const set_Array = () => {
-    setArray([...array, { name: "New Wolf", status: false }]);
+    setArray([...array, { name: "New Wolf", status: false }]);//spread operator
   };
   return (
     <div>
       <ol>
+        <AgregarTarea agregarTarea={setArray}></AgregarTarea>
         {array.map((item,index) => (
           <Items key={index} name={item.name} item_status={item.status}></Items>
         ))}

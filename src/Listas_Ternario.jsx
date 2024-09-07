@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 const Listas_Ternario = () => {
   const Items = ({ name = "Item", item_status = false }) => {
     return (
