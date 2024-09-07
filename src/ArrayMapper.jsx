@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import AgregarTarea from "./components/AgregarTarea";
+import AgregarRaza from "./components/AgregarTarea";
 
 const Items = ({ name = "Item", item_status = false }) => {
   return (
@@ -27,7 +27,7 @@ const ArrayMapper = () => {
   return (
     <div>
       <ol>
-        <AgregarTarea agregarTarea={setArray}></AgregarTarea>
+        <AgregarRaza agregarRaza={setArray}></AgregarRaza>
         {array.map((item,index) => (
           <Items key={index} name={item.name} item_status={item.status}></Items>
         ))}
