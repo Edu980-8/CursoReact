@@ -9,6 +9,8 @@ const Items = ({ name = "Item", item_status = false }) => {
   );
 };
 
+
+
 const ArrayMapper = () => {
   let sectionsList = [
     { name: "Husky Manto Arena", status: false },
@@ -18,14 +20,17 @@ const ArrayMapper = () => {
     { name: "Husky Manto Gris", status: false },
   ];
   const [array, setArray] = useState(sectionsList);
-
+  const set_Array = () => {
+    setArray([...array, { name: "New Wolf", status: false }]);
+  };
   return (
     <div>
       <ol>
-        {sectionsList.map((item) => (
-          <Items name={item.name} item_status={item.status}></Items>
+        {array.map((item,index) => (
+          <Items key={index} name={item.name} item_status={item.status}></Items>
         ))}
       </ol>
+      <button onClick={set_Array}>Add Wolf</button>
     </div>
   );
 };
